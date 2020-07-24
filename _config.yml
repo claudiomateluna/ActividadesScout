@@ -11,7 +11,7 @@ email: evelyn.nahuelhual@gmail.com
 description: Encuentra actividades dinámicas para scouts en nuestro sitio
 logo: "/assets/img/brandsvg.png"
 brand: "/assets/img/brandsvg.svg"
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "ActividadesScout" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 permalink: /:title/
 exclude: ['README.md']
