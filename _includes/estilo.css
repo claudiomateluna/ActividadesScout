@@ -83,17 +83,16 @@ a.masInfo{color:#10A0CA;background:#fff;border:1px solid #C6EEFA;padding:6px;bor
 	.cabSvgH{max-width:40px;min-width:40px;margin:2px;padding:5px;}
 	.cabSvgHM{max-width:30px;min-width:30px;}
 	.cabAutor{min-height:40px;padding:5px}
-	.cabItem{margin:0 20px 0 0;min-height:35px;padding:1px}
+	.cabItem{margin:0 20px 0 0;min-height:35px;padding:1px;color:#084A5E}
 	.cabItemM{margin:0 0 0 0;min-height:20px;padding:1px}
-	.cabItemP{font-size: 1.2rem}
-	.cabItemTitulo{font-family: 'Satisfy',cursive;font-size:1.4rem;font-weight:700;padding:2px;}
+	.cabItemTitulo{font-family: 'Satisfy',cursive;font-size:1.4rem;font-weight:700;padding:2px;color:#10A0CA;}
 	.cabItemM a {text-decoration: none;}
 	.cabItemHash{background:#C6EEFA;border-radius:20px;padding:0px 5px;}
 	.cabPdf{min-height:30px;margin:0 20px 0 10px;}
 /*Contenido Central*/
-.contenido{font-family:'Courgette',cursive;font-size:16px;line-height: 1.8;}
+.contenido{font-family:'Courgette',cursive;font-size:16px;line-height: 1.8;color:#084A5E}
 .contenido p{padding:8px 0;text-align:justify;}
-.contenido h3{padding-top:8px;}
+.contenido h3{padding-top:8px;color:#10A0CA}
 .hr_contenido{border-width: 0.5px;border-style:dashed;border-color:#C6EEFA;max-width: 50%;margin: 5px 0 0;}
 .hr_aside{border-width: 0.5px;border-style:dashed;border-color:#C6EEFA;max-width: 50%;margin: 5px 0 5px;}
 .img_right{float:right;margin-left:5px;}
