@@ -102,7 +102,7 @@ a.masInfo{color:#10A0CA;background:#fff;border:1px solid #C6EEFA;padding:6px;bor
 /* Configuración de Pagina */
 .titulo_pagina{color:#aeccaf;font-weight:bolder;text-align:center;}
 .titulo_pagina:hover{color:#aeccaf;}
-.titulo_inicio{color:#aeccaf;font-weight:bolder;text-align:center;font-family: 'Norican', cursive;font-size:1.7rem}
+.titulo_inicio{color:#aeccaf;font-weight:bolder;text-align:center;font-family: 'Satisfy', cursive;font-size:1.7rem}
 .titulo{font-size:20px;position:absolute;top:16px;right:15px;text-transform:capitalize;color:#10A0CA;}
 .titulo:hover{color:#052C39;}
 .hr_pagina{border-top:1px solid #8db78f;border-bottom:1px solid #8db78f;margin:5px 0;padding:5px 0;border-radius:6px;}
