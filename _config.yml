@@ -1,0 +1,31 @@
+# Proyecto Google AMP para sitio de actividades scouts
+
+# Configuraciones del sitio
+
+title: Actividades Guías y Scouts
+name: Actividades Guías y Scouts
+address: > 
+  Padre Gustavo Le Paige 0331
+  La Granja, Santiago, Chile
+email: evelyn.nahuelhual@gmail.com
+description: Encuentra actividades dinámicas para scouts en nuestro sitio
+logo: "/assets/img/brandsvg.png"
+brand: "/assets/img/brandsvg.svg"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+permalink: /:title/
+exclude: ['README.md']
+keywords: ['scout', 'scouts', 'juegos scouts', 'actividades']
+
+# Build settings
+markdown: kramdown
+
+kramdown:
+  parse_block_html: true
+
+# Colecciones del sitio
+collections:
+  actividades:
+    output: true
+    categoria: ""
+    permalink: /:collection/:name

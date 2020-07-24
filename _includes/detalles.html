@@ -1,0 +1,105 @@
+<div class="z2 xs-hide sm-hide">
+	<div class="cabTitulo">
+		<div class="cabSvgH left">
+			<amp-img width="40" height="40" layout="responsive" src="{{site.baseurl}}/assets/svg/nombre.svg"></amp-img>
+		</div>
+		{{ page.titulo }}
+	</div>
+	<div class="cabCompartir">
+		<div class="left">
+			<div class="cabCompartirTitulo">Compartir >></div>
+		</div>
+		<div class="right">
+			{% include compartir.html %}
+		</div>
+	</div>
+	<!--ACTIVIDADES-->
+	{% unless page.unidad == nil %}
+		<div class="cabItem overflow-hidden flex items-center justify-between">
+			<div class="flex items-center justify-start">
+				<div class="left cabSvg">
+					<amp-img width="30" height="30" layout="responsive" src="{{site.baseurl}}/assets/svg/unidades.svg"></amp-img>
+				</div>
+				<dt class="left cabItemTitulo">
+					Unidad:
+				</dt>
+			</div>
+			<dd class="right right-align">
+				{{page.unidad}}
+			</dd>
+		</div>
+	{% endunless %}
+	{% unless page.area == nil %}
+		<div class="cabItem overflow-hidden flex items-center justify-between">
+			<div class="flex items-center justify-start">
+				<div class="left cabSvg">
+					<amp-img width="30" height="30" layout="responsive" src="{{site.baseurl}}/assets/svg/area.svg"></amp-img>
+				</div>
+				<dt class="left cabItemTitulo">
+					Área:
+				</dt>
+			</div>
+			<dd class="right right-align">
+				{% assign cabArea = {{page.area}} %}
+				{% for item in cabArea %}
+				<span class="cabItemHash">#{{item}}</span>
+				{% endfor %}
+			</dd>
+		</div>
+	{% endunless %}
+	{% unless page.lugar == nil %}
+		<div class="cabItem overflow-hidden flex items-center justify-between">
+			<div class="flex items-center justify-start">
+				<div class="left cabSvg">
+					<amp-img width="30" height="30" layout="responsive" src="{{site.baseurl}}/assets/svg/lugar.svg"></amp-img>
+				</div>
+				<dt class="left cabItemTitulo">
+					Lugar:
+				</dt>
+			</div>
+			<dd class="right right-align">
+				{% assign cabLugar = {{page.lugar}} %}
+				{% for item in cabLugar %}
+				<span class="cabItemHash">#{{item}}</span>
+				{% endfor %}
+			</dd>
+		</div>
+	{% endunless %}
+	<!--LIBROS-->
+	{% unless page.pdf == nil %}
+	<a href="{{site.baseurl}}/{{page.pdf}}">
+		<div class="cabItem overflow-hidden flex items-center justify-between">
+			<div class="flex items-center justify-start">
+				<div class="left cabSvg">
+					<amp-img width="30" height="30" layout="responsive" src="{{site.baseurl}}/assets/svg/pdf.svg"></amp-img>
+				</div>
+				<dt class="left cabItemTitulo">
+					Descargar PDF
+				</dt>
+			</div>
+			<dd class="right cabSvg">
+				<i class="fa fa-download"></i>
+			</dd>
+		</div>
+	</a>
+	{% endunless %}
+	<!--TODOS-->
+	{% unless page.categoria == nil %}
+		<div class="cabItem overflow-hidden flex items-center justify-between">
+			<div class="flex items-center justify-start">
+				<div class="left cabSvg">
+					<amp-img width="30" height="30" layout="responsive" src="{{site.baseurl}}/assets/svg/categoria.svg"></amp-img>
+				</div>
+				<dt class="left cabItemTitulo">
+					Categorias:
+				</dt>
+			</div>
+			<dd class="right right-align">
+				{% assign cabCat = {{page.categoria}} %}
+				{% for item in cabCat %}
+				<span class="cabItemHash">#{{item}}</span>
+				{% endfor %}
+			</dd>
+		</div>
+	{% endunless %}
+</div>

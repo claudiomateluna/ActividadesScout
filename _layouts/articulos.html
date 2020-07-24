@@ -1,0 +1,69 @@
+---
+layout: default
+---
+<div class="py4">{{page.titulo}}</div>
+<main class="max-width-5 mx-auto" role="main">
+	<article class="clearfix" role="article">
+		<div class="col col-12"></div>
+		<div class="p1 flex justify-center items-center">
+			<div class="cabImg">
+				<amp-img src="{{site.baseurl}}/{{page.img}}" alt="{{ page.title }}" width="320" height="300" layout="responsive" class="circle"></amp-img>
+				{% include detallesMoviles.html %}
+			</div>
+			{% include detalles.html %}
+		</div>
+		<div class="col col-12 sm-col-12 md-col-4 lg-col-3">_</div>
+		<div class="col col-12 sm-col-12 md-col-8 lg-col-9 px1">
+			<div class="contenido">
+				{% unless page.objetivos == nil %}
+					<h3>Objetivos</h3>
+					{% assign objetivos = {{page.objetivos}} %}
+					{% for items in objetivos %}
+					<ul>
+						<li>{{items}}</li>
+					</ul>
+					{% endfor %}
+					<hr class="hr_contenido">
+				{% endunless %}
+
+				{% unless page.materiales == nil %}
+					<h3>Materiales</h3>
+					{% assign materiales = {{page.materiales}} %}
+					{% for items in materiales %}
+					<ul>
+						<li>{{items}}</li>
+					</ul>
+					{% endfor %}
+					<hr class="hr_contenido">
+				{% endunless %}
+
+				<h3>Descripción</h3>
+				{{ content }}
+				<hr class="hr_contenido">
+
+				{% unless page.recomendaciones == nil %}
+					<h3>Recomendaciones</h3>
+
+					{% assign recomendaciones = {{page.recomendaciones}} %}
+					{% for items in recomendaciones %}
+					<ul>
+						<li>{{items}}</li>
+					</ul>
+					{% endfor %}
+					<hr class="hr_contenido">
+				{% endunless %}
+
+				{% unless page.evaluacion == nil %}
+					<h3>Evaluación</h3>
+					{% assign evaluacion = {{page.evaluacion}} %}
+					{% for items in evaluacion %}
+					<ul>
+						<li>{{items}}</li>
+					</ul>
+					{% endfor %}
+					<hr class="hr_contenido">
+				{% endunless %}
+			</div>
+		</div>
+	</article>
+</main>

@@ -1,0 +1,113 @@
+---
+layout: default
+priority: 1.0
+changefreq: weekly
+amp_components:
+  - <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+  - <script async custom-element="amp-user-notification" src="https://cdn.ampproject.org/v0/amp-user-notification-0.1.js"></script>
+---
+<!--INICIO HERO-->
+<div class="pt2 parent max-width-4 mx-auto">
+	<amp-img width="798" height="285" layout="responsive" src="/assets/img/bosque.svg"></amp-img>
+	<amp-img width="auto" height="20" layout="fixed-height" src="/assets/img/trebol.svg" class="image2"></amp-img>
+</div>
+<!--FIN HERO-->
+<div class="pt4"></div>
+<!--INICIO ACTIVIDADES-->
+<div class="clearfix pt4 center">
+</div>
+<div class="clearfix mx-auto max-width-4">
+	<div class="sm-col sm-col-12 md-col-4 lg-col-4 max-width-4">
+		<div class="hero_ mx-auto">
+			<amp-carousel height="465" layout="fixed-height" type="carousel" class="mt2">
+			{% assign actividades = site.actividades | sort: "orden" | reverse %}
+			{% for actividad in actividades limit:3 %}
+				<article class="news_items">
+					<amp-img src="{{ site.baseurl }}/{{ actividad.img }}" alt="{{ actividad.title }}" width="320" height="300" layout="responsive" class="rounded-top"></amp-img>
+					<div>
+						<header class="news_title center px1 py1 robotoSlab">
+							<h3>
+								<a href="{{ site.baseurl }}{{ actividad.url }}">{{ actividad.titulo }}</a>
+							</h3>
+						</header>
+						<section class="px1 pb1 center robotoSlib resumen">
+							<p>{{ actividad.resumen | strip_html | truncatewords: 38 }}</p>
+						</section>
+					</div>
+					<div class="flex flex-wrap">
+						<div class="sociales col-8">
+							<amp-social-share type="email"
+								class="social-share"
+								width="40"
+								height="40"
+								data-param-text="Mira esta actividad en nuestro sitio"
+								data-param-url="{{ site.baseurl }}{{ actividad.url }}"
+								data-param-attribution="Buena Caza Scout">
+							</amp-social-share>
+							<amp-social-share type="facebook"
+								class="social-share"
+								data-param-app_id="380130648676659"
+								data-param-quote="{{ actividad.resumen }}"
+								data-param-href="{{ site.baseurl }}{{ actividad.url }}"
+								width="40"
+								height="40"
+								data-param-text="Mira esta actividad en nuestro sitio"
+								data-param-url="{{ site.baseurl }}{{ actividad.url }}"
+								data-param-attribution="Buena Caza Scout">
+							</amp-social-share>
+							<amp-social-share type="twitter"
+								class="social-share"
+								width="40"
+								height="40"
+								data-param-text="Mira esta actividad en nuestro sitio"
+								data-param-url="{{ site.baseurl }}{{ actividad.url }}"
+								data-param-attribution="Buena Caza Scout">
+							</amp-social-share>
+							<amp-social-share type="whatsapp"
+								class="social-share"
+								width="40"
+								height="40"
+								data-param-text="Mira esta actividad en nuestro sitio"
+								data-param-url="{{ site.baseurl }}{{ actividad.url }}"
+								data-param-attribution="Buena Caza Scout">
+							</amp-social-share>
+						</div>
+						<div class="col-4">
+							<a href="{{ site.baseurl }}{{ actividad.url }}" class="leer">Leer más...</a>
+						</div>
+					</div>
+				</article>
+			{% endfor %}
+			</amp-carousel>
+			<div class="hr_paginas flex flex-wrap justify-around">
+				<a href="{{site.baseurl}}/actividades" class="masInfo robotoSlab center">Ver Más Actividades +</a>
+			</div>
+		</div>
+	</div>
+	<div class="sm-col sm-col-12 md-col-8 lg-col-8 xs-hide sm-hide">
+		<div class="list-reset ml1">
+			{% assign actividades = site.actividades | sort: "orden" %}
+			{% for actividad in actividades limit:3 %}
+			<div class="p1 flex justify-start items-center">
+				<div class="ListaArtImg">
+					<amp-img src="{{ site.baseurl }}/{{ actividad.img }}" alt="{{ actividad.title }}" width="320" height="300" layout="responsive" class="circle"></amp-img>
+				</div>
+				<div class="z2">
+					<div class="ListaArtTit mxn3 col-6">
+						<h3>
+							<a href="{{ site.baseurl }}{{ actividad.url }}">{{ actividad.titulo }}</a>
+						</h3>
+					</div>
+					<div class="ListaArtP overflow-hidden p1">
+						<p>{{ actividad.resumen | strip_html | truncatewords: 38 }}</p>
+					</div>
+					<div class="ListaMas">
+						<a href="{{ site.baseurl }}{{ actividad.url }}">Quiero más información</a>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<!--FIN ACTIVIDADES-->
